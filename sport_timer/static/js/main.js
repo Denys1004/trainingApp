@@ -56,29 +56,6 @@ window.onload=changeImg();
 
 
 
-
-
-
-
-
-// scroll to top
-const btnScrollToTop = document.querySelector("#btnScrollToTop");
-btnScrollToTop.addEventListener("click", function () {
-  $("html, body").animate({ scrollTop: 0 }, "slow");
-});
-
-$(window).scroll(function() {
-    if ($(this).scrollTop()) {
-        $('#scroll-arrow:hidden').stop(true, true).fadeIn();
-    } else {
-        $('#scroll-arrow').stop(true, true).fadeOut();
-    }
-});
-
-
-
-
-
 //Countdown
 // 1. grabing h1 element using its id and storing it into variable numberChanger
 let numberChanger = document.getElementById("timer_workout");
@@ -103,3 +80,20 @@ window.onload=setInterval(changeNumber, 1000);
 
 
 
+
+
+
+
+// scroll to top
+const btnScrollToTop = document.querySelector("#btnScrollToTop");
+btnScrollToTop.addEventListener("click", function () {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+
+$(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('#scroll-arrow:hidden').stop(true, true).fadeIn();
+    } else {
+        $('#scroll-arrow').stop(true, true).fadeOut();
+    }
+});

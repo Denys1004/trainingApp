@@ -209,7 +209,7 @@ we need to move it back, because now its hidden x 100%  */
           justify-content: center;
 }
 
-.timer .timer_workout {
+.timer #timer_workout {
   font-weight: 700;
   font-size: 58px;
   margin-bottom: -5px;
