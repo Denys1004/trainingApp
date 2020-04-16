@@ -1,0 +1,50 @@
+$bgcolor1: rgba(100, 100, 160, 0.7);
+$bgcolor2: #2655ac;
+$textcolor: rgb(233, 233, 233);
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+// body{
+//     background-color: #5d4954;
+// }
+
+@import'./nav';
+@import'./pageone';
+@import'./imageslider';
+
+
+
+
+
+
+                               
+/***************************************   Scroll to Top Arrow   ******************************************************/
+/**********************************************************************************************************************/
+#btnScrollToTop{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: Transparent;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .6s;
+}
+#scroll-arrow{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+#btnScrollToTop:hover{
+    background: rgb(226, 226, 226);
+}
