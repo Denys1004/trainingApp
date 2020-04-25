@@ -32,9 +32,9 @@ let i = 0; 			// Start Point
 let images = [];	// Images Array
 // let time = 2000;	// Time Between Switch
 // Image List
-images[0] = '../static/images/ex1.gif';
-images[1] = '../static/images/ex2.gif';
-images[2] = '../static/images/ex3.gif';
+images[0] = '../static/images/ex1_wo_bg.gif';
+images[1] = '../static/images/ex2_wo_bg.gif';
+images[2] = '../static/images/ex3_wo_bg.gif';
 // Change Image
 function changeImg(){
 	document.slide.src = images[i];
@@ -56,6 +56,10 @@ window.onload=changeImg();
 
 
 
+
+
+
+
 //Countdown
 // 1. grabing h1 element using its id and storing it into variable numberChanger
 let numberChanger = document.getElementById("timer_workout");
@@ -65,12 +69,35 @@ let numbers = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 // 3. making counter, it will count which position we are in the list
 let counter = 0;
 
+let colorChanger = document.getElementsByClassName("timer");
+
+// switch(numbers){
+//     case (numbers[7] === '3':
+//         counterbg.style.backgroundColor = 'green';
+// }
+
+let counterbg = document.getElementById('timer_div');
+// counterbg.style.backgroundColor = 'green';
+
+
+let rest = document.getElementById('rest');
+
 // 4. Creating function which will be changing our numbers
 function changeNumber(){
+
     // 7. when circle is over we need to reset counter back to 0
     if(counter >= numbers.length){
+        counterbg.style.backgroundColor = 'green';
+        rest.innerHTML = 'Rest'
         counter = 0;
+    }else if(counter === 0 || counter === 1 || counter === 2){
+        counterbg.style.backgroundColor = 'green';
+        rest.innerHTML = 'Rest'
+    }else{
+        counterbg.style.backgroundColor = 'red';
+        rest.innerHTML = ''
     }
+
     // 5. here we need to access properties of the пункт1 numberChanger. 
     numberChanger.innerHTML = numbers[counter];
     counter = counter + 1;

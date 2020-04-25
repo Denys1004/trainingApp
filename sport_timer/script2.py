@@ -1,22 +1,43 @@
-import time
+def foo(num):
+    y = 1
+    for x in range(num, 1, -1):
+        y = y*x
 
-def coutdown():
-    while True:
+    return y
+    
 
-        timer=4
-        print("REST")
-        while timer>0:
-            print(timer)
-            time.sleep(1)
-            timer -= 1
+print(foo(5))
+
+
+
+
+
+
+
+
+
+
+
+
+# import time
+
+# def coutdown():
+#     while True:
+
+#         timer=4
+#         print("REST")
+#         while timer>0:
+#             print(timer)
+#             time.sleep(1)
+#             timer -= 1
         
-        timer = 5
-        print("WORKOUT")
-        while timer>0:
-            print(timer)
-            time.sleep(1)
-            timer -= 1
-coutdown()
+#         timer = 5
+#         print("WORKOUT")
+#         while timer>0:
+#             print(timer)
+#             time.sleep(1)
+#             timer -= 1
+# coutdown()
 
 
 

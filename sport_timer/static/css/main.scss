@@ -1,5 +1,6 @@
 $bgcolor1: rgba(100, 100, 160, 0.7);
 $bgcolor2: #2655ac;
+$bgcolor3: #08a735;
 $textcolor: rgb(233, 233, 233);
 
 *{
@@ -11,9 +12,10 @@ $textcolor: rgb(233, 233, 233);
     font-family: 'Open Sans', sans-serif;
 }
 
-// body{
-//     background-color: #5d4954;
-// }
+body{
+    background: radial-gradient(rgba(201, 219, 250, 0.9), rgb(2, 43, 145)) no-repeat;
+    height: 100vh;
+}
 
 @import'./nav';
 @import'./pageone';
