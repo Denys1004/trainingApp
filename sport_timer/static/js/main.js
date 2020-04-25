@@ -71,20 +71,13 @@ let counter = 0;
 
 let colorChanger = document.getElementsByClassName("timer");
 
-// switch(numbers){
-//     case (numbers[7] === '3':
-//         counterbg.style.backgroundColor = 'green';
-// }
-
 let counterbg = document.getElementById('timer_div');
 // counterbg.style.backgroundColor = 'green';
-
 
 let rest = document.getElementById('rest');
 
 // 4. Creating function which will be changing our numbers
 function changeNumber(){
-
     // 7. when circle is over we need to reset counter back to 0
     if(counter >= numbers.length){
         counterbg.style.backgroundColor = 'green';
@@ -97,7 +90,6 @@ function changeNumber(){
         counterbg.style.backgroundColor = 'red';
         rest.innerHTML = ''
     }
-
     // 5. here we need to access properties of the пункт1 numberChanger. 
     numberChanger.innerHTML = numbers[counter];
     counter = counter + 1;

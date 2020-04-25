@@ -45,3 +45,15 @@
     background-color: $bgcolor3;
     z-index: 1;
 }
+
+@media screen and (max-width:630px){
+    .maindiv{
+        margin: 40px auto 0 0;
+    }
+}
+
+@media screen and (max-width:500px){
+    .maindiv{
+        margin: 60px auto 0 0;
+    }
+}

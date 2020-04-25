@@ -9,7 +9,7 @@
 }
 
 body {
-  background: radial-gradient(rgba(201, 219, 250, 0.9), #022b91) no-repeat;
+  background: radial-gradient(#e4edfe, #022b91) no-repeat;
   height: 100vh;
 }
 
@@ -197,32 +197,41 @@ we need to move it back, because now its hidden x 100%  */
 .page-name {
   width: 90%;
   margin: 20px auto;
+  padding: 40px 20px;
   text-align: center;
 }
 
-.page-name .start_btn {
-  width: 120px;
-  height: 40px;
+.page-name h1 {
+  font-size: 2rem;
+}
+
+.page-name p {
+  text-transform: uppercase;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+.page-name a {
+  color: #071293;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  margin-top: 20px;
+  margin-top: 10px;
+}
+
+.page-name a .start_btn {
+  width: 180px;
+  height: 50px;
   margin: 20px auto;
-  background-color: green;
-  border-radius: 10px;
-  padding: 10px;
+  background-color: #fee109;
+  border-radius: 20px;
+  padding: 15px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
-.page-name .start_btn:hover {
-  background-color: #c9940e;
-}
-
-.page-name .start_btn a {
-  color: white;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-}
-
-.page-name .start_btn a:hover {
-  color: #040404;
+.page-name a .start_btn:hover {
+  background-color: white;
 }
 
 .timer {
@@ -283,6 +292,18 @@ we need to move it back, because now its hidden x 100%  */
 #timer_div {
   background-color: #08a735;
   z-index: 1;
+}
+
+@media screen and (max-width: 630px) {
+  .maindiv {
+    margin: 40px auto 0 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .maindiv {
+    margin: 60px auto 0 0;
+  }
 }
 
 /***************************************   Scroll to Top Arrow   ******************************************************/
