@@ -15,7 +15,11 @@
   </head>
   <body>
     <img id='bg_lines' src="../static/images/bottom.png" alt="bottom">
-    <img id="bg_logo" src="../static/images/bg_logo.png" alt="bg_logo" >
+    <img id="bg_logo" src="../static/images/bg_logo.png" alt="bg_logo">
+    <div id="bottom_right">
+      <p>@ Denys Krychevskyi <span> & </span> Artem Shchepetkin</p>
+      <img src="../static/images/bottom_right.png" alt="bottom_right">
+    </div>
     <div class="nav-container">
       <nav>
 
@@ -31,6 +35,7 @@
           <ul class="nav-links">
             <img src="../static/images/bar.png" alt="bar" id="bar_bg">
             <li><a href="{{ url_for('pageone') }}">Home</a></li>
+            <li><a href="{{ url_for('pagethree') }}">Exercises</a></li>
             <li><a href="{{ url_for('pagetwo') }}">Workout</a></li>
           </ul>
 

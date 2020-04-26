@@ -1,35 +1,33 @@
-.timer{
-    position: absolute;
-    left: 1%;
-    top: 1%;
-    width: 180px;
-    height: 180px;
-    // background: url(../images/timer_bg_red.png) no-repeat center center/cover;
-    background-image: url(../images/timer_bg_blue.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    // border-radius: 50%;
-    // border: 4px solid $textcolor;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    // opacity: 0.6;
-    #timer_workout{
-        font-weight: 700;
-        font-size: 140px;
-        margin-bottom: -5px;
-        color:$textcolor;
-    }
-}
+
 
 .pagetwo{
     position: relative;
+    .timer{
+        position: absolute;
+        left: 2%;
+        top: 2%;
+        background-image: url(../images/timer_bg_blue.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        z-index: 1;
+
+        #timer_workout{
+            font-weight: 700;
+            font-size: 140px;
+            color:$textcolor;
+            font-family: 'Revalia', cursive;
+        }
+    }
 }
 
 #rest{
     position: absolute;
+    font-family: 'Revalia', cursive;
     left: 0; 
     right: 0; 
     margin-left: auto; 
@@ -45,27 +43,43 @@
     max-width: 900px;
     margin: auto;
     height: auto;
+    z-index: -1;
+    position: relative;
+    background: url(../images/bg_image.png) no-repeat center center/cover;
     .exercise_photo{
         width: 100%;
         height: auto;
     }
 }
-#timer_div{
-    // background-color: $bgcolor3;
-    z-index: 1;
-    h1{
-        font-family: 'Revalia', cursive;
-    }   
+
+@media screen and (max-width:800px){
+    #rest{
+        font-size: 210px;
+        top: 25%;
+    }
+    .exercise_photo{
+        margin-top: 60px;
+    }
 }
+
 
 @media screen and (max-width:630px){
     #rest{
-        font-size: 230px;
+        font-size: 180px;
+        top: 30%;
+    }
+    .exercise_photo{
+        margin-top: 75px;
     }
 }
 
 @media screen and (max-width:500px){
     #rest{
-        font-size: 180px;
+        font-size: 150px;
+        top: 35%;
+    }
+    .exercise_photo{
+        margin-top: 90px;
+        margin-left: 0;
     }
 }

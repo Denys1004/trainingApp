@@ -1,13 +1,17 @@
 {%extends "layout.html"%}
 {%block content%}
 <div class="page-container pagetwo">
+    <div class="page_navigation">
+        <p><a href="{{ url_for('pageone') }}">Home</a> > Workout</p>
+    </div>
 
     <div id ="timer_div" class="timer">
         <h1 id="timer_workout"></h1>
     </div>
     <div id = 'rest'></div>
     <div class="maindiv">
-        <img class="exercise_photo" name="slide"/>
+        <img class="exercise_photo" name="slide" alt='exercise'/>
+        <!-- <img src="../static/images/bg_image.png" class="bg_image" alt="bg_image"/> -->
     </div>
 </div>
 {%endblock%}

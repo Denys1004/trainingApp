@@ -1,6 +1,7 @@
 {%extends "layout.html"%}
 {%block content%}
 <div class="page-container pageone">
+
     <div class="page-name">
         <h1>HIIT Training</h1>
         <p>6 exercises</p>
@@ -8,7 +9,8 @@
         <p>15 seconds Rest</p>
         <p>3 cycles</p>
         
-        <a href="{{ url_for('pagetwo') }}"><div class="start_btn">START</div></a>
+        <a href="{{ url_for('pagetwo') }}"><div class="start_btn">START WORKOUT</div></a>
+        <a href="{{ url_for('pagethree') }}"><div class="start_btn">CHOOSE EXERCISES</div></a>
     </div>
     <!-- <hr class="devider"> -->
 

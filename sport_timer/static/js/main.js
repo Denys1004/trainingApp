@@ -64,7 +64,7 @@ window.onload=changeImg();
 // 1. grabing h1 element using its id and storing it into variable numberChanger
 let numberChanger = document.getElementById("timer_workout");
 // 2. making list with numbers, we want to loop through (we can pass strings in [array])
-let numbers = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+let numbers = [5, 4, 3, 2, 1, 5, 4, 3, 2, 1];
 // 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 
 // 3. making counter, it will count which position we are in the list
 let counter = 0;
@@ -73,25 +73,20 @@ let colorChanger = document.getElementsByClassName("timer");
 
 let counterbg = document.getElementById('timer_div');
 let counter_number = document.getElementById('timer_workout');
-// counterbg.style.backgroundColor = 'green';
 
 let rest = document.getElementById('rest');
 
 // 4. Creating function which will be changing our numbers
 function changeNumber(){
-    // 7. when circle is over we need to reset counter back to 0
-    if(counter >= numbers.length){
-        // counterbg.style.backgroundColor = 'green';
-        counter_number.style.color='rgb(159, 3, 3)';
+    if(counter >= numbers.length){       // 7. when circle is over we need to reset counter back to counter = 0
+        counter_number.style.color='rgb(5, 118, 37)';
         rest.innerHTML = 'Rest'
         counter = 0;
-    }else if(counter === 0 || counter === 1 || counter === 2){
-        // counterbg.style.backgroundColor = 'green';
+    }else if(counter >= 0 && counter < 5){
         counter_number.style.color='rgb(5, 118, 37)';
         rest.innerHTML = 'Rest'
     }else{
-        // counterbg.style.backgroundColor = 'red';
-        counter_number.style.color='rgb(159, 3, 3)'; // specify the image path here
+        counter_number.style.color='rgb(220, 5, 2)';
         rest.innerHTML = ''
     }
     // 5. here we need to access properties of the пункт1 numberChanger. 

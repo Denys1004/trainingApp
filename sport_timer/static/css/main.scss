@@ -1,7 +1,7 @@
 $bgcolor1: rgba(100, 100, 160, 0.7);
 $bgcolor2: #2655ac;
 $bgcolor3: #08a735;
-$textcolor: rgb(233, 233, 233);
+$textcolor: rgb(220, 5, 2);
 
 *{
     margin: 0px;
@@ -13,7 +13,7 @@ $textcolor: rgb(233, 233, 233);
 }
 
 body{
-    background: radial-gradient( rgba(46, 46, 46, 0.8), rgba(23, 23, 23, 0.8),rgba(19, 19, 19, 0.934), rgb(0, 0, 0));
+    background: radial-gradient( rgba(102, 102, 102, 0.6), rgba(44, 44, 44, 0.8),rgba(19, 19, 19, 0.913), rgb(0, 0, 0)), url(../images/pattern.png);
     height: 100vh;
     position: relative;
     #bg_logo{
@@ -32,8 +32,38 @@ body{
         left: 0;
         z-index: -2;
     }
+    #bottom_right{
+        position: absolute;
+        width: 500px;
+        bottom: 0;
+        right: 0;
+        z-index: -2;
+        p{
+            position: absolute;
+            color: rgb(160, 160, 160);
+            bottom: 18px;
+            right: 120px; 
+            font-size: 12px;
+            span{
+                color: $textcolor;
+            }
+        }
+    }
 }
-
+.page_navigation{
+    margin-left: 20px;
+    z-index: 3;
+    p{
+        color: rgb(145, 145, 145);
+        font-size: 10px;
+        a{
+            color: rgb(255, 255, 255);
+            &:hover{
+                color: rgb(145, 145, 145);
+            }
+        }
+    }
+}
 
 @media screen and (max-width:360px){
     body{
