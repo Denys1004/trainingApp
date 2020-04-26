@@ -177,7 +177,7 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #080c85;
+  color: #128508;
 }
 
 /***************************  BURGER LINES    *****************************/
@@ -383,6 +383,31 @@ we need to move it back, because now its hidden x 100%  */
 .maindiv .exercise_photo {
   width: 100%;
   height: auto;
+}
+
+.player-box {
+  position: absolute;
+  bottom: 0;
+  left: 1%;
+}
+
+.player-box #playlist {
+  margin-left: 10px;
+  opacity: 0.1;
+}
+
+.player-box #playlist a {
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+audio {
+  opacity: 0;
+}
+
+#playlist .current-song a {
+  font-size: 12px;
+  color: white;
 }
 
 @media screen and (max-width: 800px) {

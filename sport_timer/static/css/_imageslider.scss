@@ -52,6 +52,29 @@
     }
 }
 
+.player-box{
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    #playlist{
+        margin-left: 10px;
+        opacity: 0.1;
+        a{
+            color: rgb(179, 179, 179);
+            font-size: 12px;
+        }
+    }
+}
+
+audio{
+    opacity: 0;
+}
+
+#playlist .current-song a{
+    font-size: 12px;
+    color: white;
+}
+
 @media screen and (max-width:800px){
     #rest{
         font-size: 210px;

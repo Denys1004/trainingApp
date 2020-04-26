@@ -64,7 +64,7 @@ window.onload=changeImg();
 // 1. grabing h1 element using its id and storing it into variable numberChanger
 let numberChanger = document.getElementById("timer_workout");
 // 2. making list with numbers, we want to loop through (we can pass strings in [array])
-let numbers = [5, 4, 3, 2, 1, 5, 4, 3, 2, 1];
+let numbers = [15, 14, 13, 12, 11, 30, 29, 28, 27, 26];
 // 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 
 // 3. making counter, it will count which position we are in the list
 let counter = 0;
@@ -98,8 +98,31 @@ window.onload=setInterval(changeNumber, 1000);
 
 
 
-
-
+//Audio Player  https://www.youtube.com/watch?v=vtZCMTtP-0Y
+function audioPlayer(){
+    var currentSong = 0;
+    $("#audioPlayer")[0].src = $("#playlist li a")[0];
+    $("#audioPlayer")[0].play();
+    $("#playlist li a").click(function(e){
+       e.preventDefault(); 
+       $("#audioPlayer")[0].src = this;
+       $("#audioPlayer")[0].play();
+       $("#playlist li").removeClass("current-song");
+        currentSong = $(this).parent().index();
+        $(this).parent().addClass("current-song");
+    });
+    
+    $("#audioPlayer")[0].addEventListener("ended", function(){
+       currentSong++;
+        if(currentSong == $("#playlist li a").length)
+            currentSong = 0;
+        $("#playlist li").removeClass("current-song");
+        $("#playlist li:eq("+currentSong+")").addClass("current-song");
+        $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
+        $("#audioPlayer")[0].play();
+    });
+}
+window.onload=audioPlayer();
 
 
 // scroll to top
