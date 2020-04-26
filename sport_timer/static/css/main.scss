@@ -13,8 +13,41 @@ $textcolor: rgb(233, 233, 233);
 }
 
 body{
-    background: radial-gradient(rgb(228, 237, 254), rgb(2, 43, 145)) no-repeat;
+    background: radial-gradient( rgba(46, 46, 46, 0.8), rgba(23, 23, 23, 0.8),rgba(19, 19, 19, 0.934), rgb(0, 0, 0));
     height: 100vh;
+    position: relative;
+    #bg_logo{
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 480px; /* Need a specific value to work */
+        z-index: -1; 
+    }
+    #bg_lines{
+        position: absolute;
+        width: 500px;
+        bottom: 0;
+        left: 0;
+        z-index: -2;
+    }
+}
+
+
+@media screen and (max-width:360px){
+    body{
+        position: relative;
+        #bg_logo{
+            position: absolute;
+            // left: 0; 
+            // right: 0; 
+            // margin-left: auto; 
+            // margin-right: auto; 
+            width: 350px; /* Need a specific value to work */
+            z-index: -1; 
+        }
+    }
 }
 
 @import'./nav';

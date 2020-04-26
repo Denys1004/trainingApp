@@ -9,8 +9,40 @@
 }
 
 body {
-  background: radial-gradient(#e4edfe, #022b91) no-repeat;
+  background: radial-gradient(rgba(46, 46, 46, 0.8), rgba(23, 23, 23, 0.8), rgba(19, 19, 19, 0.934), black);
   height: 100vh;
+  position: relative;
+}
+
+body #bg_logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 480px;
+  /* Need a specific value to work */
+  z-index: -1;
+}
+
+body #bg_lines {
+  position: absolute;
+  width: 500px;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    position: relative;
+  }
+  body #bg_logo {
+    position: absolute;
+    width: 350px;
+    /* Need a specific value to work */
+    z-index: -1;
+  }
 }
 
 .nav-container {
@@ -52,6 +84,7 @@ body {
   text-align: center;
   letter-spacing: 5px;
   font-size: 20px;
+  position: relative;
 }
 
 /* right now it is possible to scroll right, and we don't want that, 
@@ -65,7 +98,8 @@ body {
 .nav-links {
   width: 200px;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(57, 2, 2, 0.7)), to(#c90303));
+  background: linear-gradient(rgba(57, 2, 2, 0.7), #c90303);
   right: 0px;
   height: 100vh;
   top: 0;
@@ -81,6 +115,13 @@ body {
   transition: transform 0.5s ease-in;
   transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
   padding: 50px 0 0 0;
+}
+
+.nav-links #bar_bg {
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  z-index: -1;
 }
 
 .nav-links li {
@@ -237,11 +278,13 @@ we need to move it back, because now its hidden x 100%  */
 .timer {
   position: absolute;
   left: 1%;
-  top: 9%;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 4px solid #e9e9e9;
+  top: 1%;
+  width: 180px;
+  height: 180px;
+  background-image: url(../images/timer_bg_blue.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -257,24 +300,26 @@ we need to move it back, because now its hidden x 100%  */
 
 .timer #timer_workout {
   font-weight: 700;
-  font-size: 58px;
+  font-size: 140px;
   margin-bottom: -5px;
   color: #e9e9e9;
 }
 
-.timer p {
-  margin-top: -10px;
-  color: #e9e9e9;
+.pagetwo {
+  position: relative;
 }
 
 #rest {
   position: absolute;
-  left: 1%;
-  top: 20%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  font-size: 50px;
+  top: 20%;
+  font-size: 300px;
   text-transform: uppercase;
-  color: #e9e9e9;
+  color: rgba(5, 157, 15, 0.865);
   font-weight: bold;
 }
 
@@ -290,19 +335,22 @@ we need to move it back, because now its hidden x 100%  */
 }
 
 #timer_div {
-  background-color: #08a735;
   z-index: 1;
 }
 
+#timer_div h1 {
+  font-family: 'Revalia', cursive;
+}
+
 @media screen and (max-width: 630px) {
-  .maindiv {
-    margin: 40px auto 0 0;
+  #rest {
+    font-size: 230px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .maindiv {
-    margin: 60px auto 0 0;
+  #rest {
+    font-size: 180px;
   }
 }
 

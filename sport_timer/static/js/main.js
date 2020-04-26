@@ -72,6 +72,7 @@ let counter = 0;
 let colorChanger = document.getElementsByClassName("timer");
 
 let counterbg = document.getElementById('timer_div');
+let counter_number = document.getElementById('timer_workout');
 // counterbg.style.backgroundColor = 'green';
 
 let rest = document.getElementById('rest');
@@ -80,14 +81,17 @@ let rest = document.getElementById('rest');
 function changeNumber(){
     // 7. when circle is over we need to reset counter back to 0
     if(counter >= numbers.length){
-        counterbg.style.backgroundColor = 'green';
+        // counterbg.style.backgroundColor = 'green';
+        counter_number.style.color='rgb(159, 3, 3)';
         rest.innerHTML = 'Rest'
         counter = 0;
     }else if(counter === 0 || counter === 1 || counter === 2){
-        counterbg.style.backgroundColor = 'green';
+        // counterbg.style.backgroundColor = 'green';
+        counter_number.style.color='rgb(5, 118, 37)';
         rest.innerHTML = 'Rest'
     }else{
-        counterbg.style.backgroundColor = 'red';
+        // counterbg.style.backgroundColor = 'red';
+        counter_number.style.color='rgb(159, 3, 3)'; // specify the image path here
         rest.innerHTML = ''
     }
     // 5. here we need to access properties of the пункт1 numberChanger. 

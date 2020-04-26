@@ -6,6 +6,7 @@
     <title>Flask App</title>
     <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Revalia&display=swap" rel="stylesheet">
 
     <!-- scroll up script and icon here-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -13,7 +14,8 @@
     
   </head>
   <body>
-
+    <img id='bg_lines' src="../static/images/bottom.png" alt="bottom">
+    <img id="bg_logo" src="../static/images/bg_logo.png" alt="bg_logo" >
     <div class="nav-container">
       <nav>
 
@@ -27,6 +29,7 @@
           </div>
 
           <ul class="nav-links">
+            <img src="../static/images/bar.png" alt="bar" id="bar_bg">
             <li><a href="{{ url_for('pageone') }}">Home</a></li>
             <li><a href="{{ url_for('pagetwo') }}">Workout</a></li>
           </ul>
