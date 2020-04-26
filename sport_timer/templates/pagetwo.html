@@ -5,29 +5,30 @@
         <p><a href="{{ url_for('pageone') }}">Home</a> > Workout</p>
     </div>
 
-    <div id ="timer_div" class="timer">
-        <h1 id="timer_workout"></h1>
+    <div class="timer_container">
+        <h1 id="timerNumber"></h1>
     </div>
-    <div id = 'rest'></div>
+
+    <div id = 'workout_status'></div>
+
     <div class="maindiv">
         <img class="exercise_photo" name="slide" alt='exercise'/>
-        <!-- <img src="../static/images/bg_image.png" class="bg_image" alt="bg_image"/> -->
     </div>
 
 
     <div class="player-box">
         <audio src="" controls id="audioPlayer"> 
-            <!-- <source src="../static/images/dadada.mp3" type="audio/mpeg"> -->
                 Sorry, your browser doesn't support html5!
         </audio>
         <ul id="playlist">
+            <li><a href="../static/images/toto_zvezda.mp3">Zvezda</a></li>
             <li><a href="../static/images/taxi.mp3">Taxi</a></li>
             <li><a href="../static/images/roy.mp3">Can't Be Touched</a></li>
             <li><a href="../static/images/dadada.mp3">Da Da Da</a></li>
-            <li><a href="../static/images/toto_zvezda.mp3">Zvezda</a></li>
             <li><a href="../static/images/huligan.mp3">Huligan</a></li>
             <li><a href="../static/images/Smoke.mp3">Smoke</a></li>
         </ul>
     </div>
+
 </div>
 {%endblock%}

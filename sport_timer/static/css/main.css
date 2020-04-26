@@ -301,7 +301,7 @@ we need to move it back, because now its hidden x 100%  */
 }
 
 .page-name a {
-  color: black;
+  color: white;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   margin-top: 20px;
@@ -309,25 +309,24 @@ we need to move it back, because now its hidden x 100%  */
 }
 
 .page-name a .start_btn {
-  width: 180px;
-  height: 50px;
-  margin: 20px auto;
-  background-color: white;
-  border-radius: 6px;
-  padding: 15px;
+  width: 230px;
+  height: 60px;
+  margin: 10px auto;
+  background: url(../images/black_button.png) no-repeat center center/cover;
+  padding: 20px 0 0;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
 .page-name a .start_btn:hover {
-  background-color: #dc0502;
+  background: url(../images/red_button.png) no-repeat center center/cover;
 }
 
 .pagetwo {
   position: relative;
 }
 
-.pagetwo .timer {
+.pagetwo .timer_container {
   position: absolute;
   left: 2%;
   top: 2%;
@@ -349,14 +348,13 @@ we need to move it back, because now its hidden x 100%  */
   z-index: 1;
 }
 
-.pagetwo .timer #timer_workout {
+.pagetwo .timer_container #timerNumber {
   font-weight: 700;
   font-size: 140px;
-  color: #dc0502;
   font-family: 'Revalia', cursive;
 }
 
-#rest {
+#workout_status {
   position: absolute;
   font-family: 'Revalia', cursive;
   left: 0;
@@ -367,7 +365,7 @@ we need to move it back, because now its hidden x 100%  */
   top: 20%;
   font-size: 300px;
   text-transform: uppercase;
-  color: rgba(5, 157, 15, 0.865);
+  color: rgba(220, 5, 2, 0.8);
   font-weight: bold;
 }
 
@@ -411,7 +409,7 @@ audio {
 }
 
 @media screen and (max-width: 800px) {
-  #rest {
+  #workout_status {
     font-size: 210px;
     top: 25%;
   }
@@ -421,7 +419,7 @@ audio {
 }
 
 @media screen and (max-width: 630px) {
-  #rest {
+  #workout_status {
     font-size: 180px;
     top: 30%;
   }
@@ -431,7 +429,7 @@ audio {
 }
 
 @media screen and (max-width: 500px) {
-  #rest {
+  #workout_status {
     font-size: 150px;
     top: 35%;
   }

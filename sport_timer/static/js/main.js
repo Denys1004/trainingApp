@@ -1,3 +1,4 @@
+// Navbar
 
 const navSlide = () =>{
     const burger = document.querySelector('.burger');
@@ -27,30 +28,27 @@ navSlide();
 
 
 
-// SPORT_image slider
+// Exercise slider
+
 let i = 0; 			// Start Point
 let images = [];	// Images Array
-// let time = 2000;	// Time Between Switch
 // Image List
 images[0] = '../static/images/ex1_wo_bg.gif';
 images[1] = '../static/images/ex2_wo_bg.gif';
 images[2] = '../static/images/ex3_wo_bg.gif';
-// Change Image
-function changeImg(){
+
+function exerciseChanger(){                                 // Change Image
 	document.slide.src = images[i];
-	// Check If Index Is Under Max
-	if(i < images.length - 1){
-	  // Add 1 to Index
-	  i++; 
-	} else { 
-		// Reset Back To O
+	if(i < images.length - 1){                              // Check If Index Is Under Max
+	  i++; 	                                                // Add 1 to Index
+	} else {                                                // Reset Back To O
 		i = 0;
 	}
-	// Run function every x seconds
-	setTimeout("changeImg()", 10000);
+	// Run function (change exercise) every x seconds
+	setTimeout("exerciseChanger()", 10000);
 }
 // Run function when page loads
-window.onload=changeImg();
+window.onload=exerciseChanger();
 
 
 
@@ -60,45 +58,47 @@ window.onload=changeImg();
 
 
 
-//Countdown
-// 1. grabing h1 element using its id and storing it into variable numberChanger
-let numberChanger = document.getElementById("timer_workout");
-// 2. making list with numbers, we want to loop through (we can pass strings in [array])
-let numbers = [15, 14, 13, 12, 11, 30, 29, 28, 27, 26];
-// 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 
-// 3. making counter, it will count which position we are in the list
-let counter = 0;
+// Timer Countdown
 
-let colorChanger = document.getElementsByClassName("timer");
+let timerNumber_h1 = document.getElementById("timerNumber");    // 1. grabing h1 element using its id and storing it into variable timerNumber_h1
+let workoutTime = [15, 14, 13, 12, 11, 30, 29, 28, 27, 26];     // 2. making list with workoutTime, we want to loop through (we can pass strings in [array])
+let counter = 0;                                                // 3. making counter, it will count which position we are in the list
+let workout_status = document.getElementById('workout_status');
 
-let counterbg = document.getElementById('timer_div');
-let counter_number = document.getElementById('timer_workout');
-
-let rest = document.getElementById('rest');
-
-// 4. Creating function which will be changing our numbers
-function changeNumber(){
-    if(counter >= numbers.length){       // 7. when circle is over we need to reset counter back to counter = 0
-        counter_number.style.color='rgb(5, 118, 37)';
-        rest.innerHTML = 'Rest'
+function oneCircleTimer(){                                        // 4. Creating function which will be changing our workoutTime
+    if(counter >= workoutTime.length){                          // when circle is over we need to reset counter back to counter = 0
+        timerNumber_h1.style.color='rgb(220, 5, 2)';
+        workout_status.innerHTML = 'Rest'
         counter = 0;
-    }else if(counter >= 0 && counter < 5){
-        counter_number.style.color='rgb(5, 118, 37)';
-        rest.innerHTML = 'Rest'
-    }else{
-        counter_number.style.color='rgb(220, 5, 2)';
-        rest.innerHTML = ''
+    }else if(counter >= 0 && counter < 5){                      // Choosing Rest time
+        timerNumber_h1.style.color='rgb(220, 5, 2)';
+        workout_status.innerHTML = 'Rest'
+    }else{                                                      // Choosing Workout time
+        timerNumber_h1.style.color='rgb(5, 118, 37)';
+        workout_status.innerHTML = ''
     }
-    // 5. here we need to access properties of the пункт1 numberChanger. 
-    numberChanger.innerHTML = numbers[counter];
+    timerNumber_h1.innerHTML = workoutTime[counter];            // 5. here we need to access properties of the пункт1 timerNumber_h1. 
     counter = counter + 1;
+
+    // Run function (change circle) every x seconds
+	// setTimeout("oneCircleTimer()", 10000 - указать время одного цикла);
 };
-// 6. now need to set interval (1st arg - is a function we want to call, 2nd - how often we want to call it)
-window.onload=setInterval(changeNumber, 1000);
+window.onload=setInterval(oneCircleTimer, 1000);                  // 6. now need to set interval (1st arg - is a function we want to call, 2nd - how often we want to call it)
 
 
 
-//Audio Player  https://www.youtube.com/watch?v=vtZCMTtP-0Y
+
+
+
+
+
+
+
+
+
+
+
+// Audio Player  https://www.youtube.com/watch?v=vtZCMTtP-0Y
 function audioPlayer(){
     var currentSong = 0;
     $("#audioPlayer")[0].src = $("#playlist li a")[0];

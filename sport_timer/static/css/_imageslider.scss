@@ -2,7 +2,7 @@
 
 .pagetwo{
     position: relative;
-    .timer{
+    .timer_container{
         position: absolute;
         left: 2%;
         top: 2%;
@@ -16,16 +16,15 @@
         justify-content: center;
         z-index: 1;
 
-        #timer_workout{
+        #timerNumber{
             font-weight: 700;
             font-size: 140px;
-            color:$textcolor;
             font-family: 'Revalia', cursive;
         }
     }
 }
 
-#rest{
+#workout_status{
     position: absolute;
     font-family: 'Revalia', cursive;
     left: 0; 
@@ -36,7 +35,7 @@
     top: 20%;
     font-size: 300px;
     text-transform: uppercase;
-    color: rgba(5, 157, 15, 0.865);
+    color:rgba(220, 5, 2, 0.8);
     font-weight: bold;
 }
 .maindiv{
@@ -76,7 +75,7 @@ audio{
 }
 
 @media screen and (max-width:800px){
-    #rest{
+    #workout_status{
         font-size: 210px;
         top: 25%;
     }
@@ -87,7 +86,7 @@ audio{
 
 
 @media screen and (max-width:630px){
-    #rest{
+    #workout_status{
         font-size: 180px;
         top: 30%;
     }
@@ -97,7 +96,7 @@ audio{
 }
 
 @media screen and (max-width:500px){
-    #rest{
+    #workout_status{
         font-size: 150px;
         top: 35%;
     }
