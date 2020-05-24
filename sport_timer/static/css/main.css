@@ -283,7 +283,7 @@ we need to move it back, because now its hidden x 100%  */
 
 .page-name {
   width: 90%;
-  margin: 20px auto;
+  margin: 0 auto;
   padding-top: 9%;
   text-align: center;
 }
@@ -320,6 +320,18 @@ we need to move it back, because now its hidden x 100%  */
 
 .page-name a .start_btn:hover {
   background: url(../images/red_button.png) no-repeat center center/cover;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+form button {
+  padding: 10px;
+  cursor: pointer;
 }
 
 .pagetwo {
