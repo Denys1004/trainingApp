@@ -9,8 +9,78 @@
 }
 
 body {
-  background: radial-gradient(#e4edfe, #022b91) no-repeat;
+  background: radial-gradient(rgba(102, 102, 102, 0.6), rgba(44, 44, 44, 0.8), rgba(19, 19, 19, 0.913), black), url(../images/pattern.png);
   height: 100vh;
+  position: relative;
+}
+
+body #bg_logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 480px;
+  /* Need a specific value to work */
+  z-index: -1;
+}
+
+body #bg_lines {
+  position: absolute;
+  width: 500px;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+}
+
+body #bottom_right {
+  position: absolute;
+  width: 500px;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+}
+
+body #bottom_right p {
+  position: absolute;
+  color: #a0a0a0;
+  bottom: 18px;
+  right: 120px;
+  font-size: 12px;
+}
+
+body #bottom_right p span {
+  color: #dc0502;
+}
+
+.page_navigation {
+  margin-left: 20px;
+  z-index: 3;
+}
+
+.page_navigation p {
+  color: #919191;
+  font-size: 10px;
+}
+
+.page_navigation p a {
+  color: white;
+}
+
+.page_navigation p a:hover {
+  color: #919191;
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    position: relative;
+  }
+  body #bg_logo {
+    position: absolute;
+    width: 350px;
+    /* Need a specific value to work */
+    z-index: -1;
+  }
 }
 
 .nav-container {
@@ -35,7 +105,7 @@ body {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  color: #e9e9e9;
+  color: #dc0502;
 }
 
 .nav-container .contact-container p {
@@ -47,11 +117,12 @@ body {
 }
 
 .nav-container .logo {
-  color: #e9e9e9;
+  color: white;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 5px;
   font-size: 20px;
+  position: relative;
 }
 
 /* right now it is possible to scroll right, and we don't want that, 
@@ -65,7 +136,8 @@ body {
 .nav-links {
   width: 200px;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(57, 2, 2, 0.7)), to(#c90303));
+  background: linear-gradient(rgba(57, 2, 2, 0.7), #c90303);
   right: 0px;
   height: 100vh;
   top: 0;
@@ -81,6 +153,13 @@ body {
   transition: transform 0.5s ease-in;
   transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
   padding: 50px 0 0 0;
+  z-index: 1;
+}
+
+.nav-links #bar_bg {
+  position: absolute;
+  bottom: 0;
+  right: -5px;
 }
 
 .nav-links li {
@@ -98,7 +177,7 @@ body {
 }
 
 .nav-links li a:hover {
-  color: #080c85;
+  color: #128508;
 }
 
 /***************************  BURGER LINES    *****************************/
@@ -122,7 +201,7 @@ body {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #e9e9e9;
+  background-color: #dc0502;
   margin: 3px 0px;
   border-radius: 3px;
   -webkit-transition: all 0.4s ease;
@@ -130,6 +209,11 @@ body {
   -webkit-box-align: right;
       -ms-flex-align: right;
           align-items: right;
+  z-index: 1;
+}
+
+.burger div:hover {
+  background-color: white;
 }
 
 /* when you click on burger, we want navbar to be visible and 
@@ -192,27 +276,32 @@ we need to move it back, because now its hidden x 100%  */
     display: block;
     text-align: left;
   }
+  .burger div {
+    background-color: white;
+  }
 }
 
 .page-name {
   width: 90%;
-  margin: 20px auto;
-  padding: 40px 20px;
+  margin: 0 auto;
+  padding-top: 9%;
   text-align: center;
 }
 
 .page-name h1 {
   font-size: 2rem;
+  color: #dc0502;
 }
 
 .page-name p {
   text-transform: uppercase;
   margin: 10px;
   font-size: 1.2rem;
+  color: white;
 }
 
 .page-name a {
-  color: #071293;
+  color: white;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   margin-top: 20px;
@@ -220,28 +309,43 @@ we need to move it back, because now its hidden x 100%  */
 }
 
 .page-name a .start_btn {
-  width: 180px;
-  height: 50px;
-  margin: 20px auto;
-  background-color: #fee109;
-  border-radius: 20px;
-  padding: 15px;
+  width: 230px;
+  height: 60px;
+  margin: 10px auto;
+  background: url(../images/black_button.png) no-repeat center center/cover;
+  padding: 20px 0 0;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
 .page-name a .start_btn:hover {
-  background-color: white;
+  background: url(../images/red_button.png) no-repeat center center/cover;
 }
 
-.timer {
+form {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+form button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pagetwo {
+  position: relative;
+}
+
+.pagetwo .timer_container {
   position: absolute;
-  left: 1%;
-  top: 9%;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 4px solid #e9e9e9;
+  left: 2%;
+  top: 2%;
+  background-image: url(../images/timer_bg_blue.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,28 +357,27 @@ we need to move it back, because now its hidden x 100%  */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
 }
 
-.timer #timer_workout {
+.pagetwo .timer_container #timerNumber {
   font-weight: 700;
-  font-size: 58px;
-  margin-bottom: -5px;
-  color: #e9e9e9;
+  font-size: 140px;
+  font-family: 'Revalia', cursive;
 }
 
-.timer p {
-  margin-top: -10px;
-  color: #e9e9e9;
-}
-
-#rest {
+#workout_status {
   position: absolute;
-  left: 1%;
-  top: 20%;
+  font-family: 'Revalia', cursive;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  font-size: 50px;
+  top: 20%;
+  font-size: 300px;
   text-transform: uppercase;
-  color: #e9e9e9;
+  color: rgba(220, 5, 2, 0.8);
   font-weight: bold;
 }
 
@@ -282,6 +385,9 @@ we need to move it back, because now its hidden x 100%  */
   max-width: 900px;
   margin: auto;
   height: auto;
+  z-index: -1;
+  position: relative;
+  background: url(../images/bg_image.png) no-repeat center center/cover;
 }
 
 .maindiv .exercise_photo {
@@ -289,20 +395,59 @@ we need to move it back, because now its hidden x 100%  */
   height: auto;
 }
 
-#timer_div {
-  background-color: #08a735;
-  z-index: 1;
+.player-box {
+  position: absolute;
+  bottom: 0;
+  left: 1%;
+}
+
+.player-box #playlist {
+  margin-left: 10px;
+  opacity: 0.1;
+}
+
+.player-box #playlist a {
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+audio {
+  opacity: 0;
+}
+
+#playlist .current-song a {
+  font-size: 12px;
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  #workout_status {
+    font-size: 210px;
+    top: 25%;
+  }
+  .exercise_photo {
+    margin-top: 60px;
+  }
 }
 
 @media screen and (max-width: 630px) {
-  .maindiv {
-    margin: 40px auto 0 0;
+  #workout_status {
+    font-size: 180px;
+    top: 30%;
+  }
+  .exercise_photo {
+    margin-top: 75px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .maindiv {
-    margin: 60px auto 0 0;
+  #workout_status {
+    font-size: 150px;
+    top: 35%;
+  }
+  .exercise_photo {
+    margin-top: 90px;
+    margin-left: 0;
   }
 }
 

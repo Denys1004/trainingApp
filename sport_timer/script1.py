@@ -11,6 +11,10 @@ def pageone():
 def pagetwo():
     return render_template('pagetwo.html')
 
+@app.route('/pagethree/')					
+def pagethree():
+    return render_template('pagethree.html')
+
 
 
 if __name__=='__main__':

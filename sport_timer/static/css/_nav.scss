@@ -1,7 +1,7 @@
 
 .nav-container{
     padding: 0 20px;
-    // background-color: rgba(255, 255, 255, 0.1);
+    // background-color: rgba(0, 0, 0, 0.6);
     nav{
         display: flex;
         justify-content: space-between;
@@ -21,12 +21,14 @@
         }
     }
     .logo{
-        color: $textcolor;
+        color: white;
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 5px;
         font-size: 20px;
+        position: relative;
     }
+
 }
 
 /* right now it is possible to scroll right, and we don't want that, 
@@ -39,7 +41,7 @@ body{
 .nav-links{
     width: 200px;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient( rgba(57, 2, 2, 0.7), rgb(201, 3, 3));
     right: 0px;
     height: 100vh;
     top: 0;
@@ -48,6 +50,13 @@ body{
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
     padding: 50px 0 0 0;
+    z-index: 1;
+    #bar_bg{
+        position: absolute;
+        bottom: 0;
+        right:-5px;
+        // z-index: -1;
+    }
     li{
         opacity: 0;
         margin-left: 70px;
@@ -58,7 +67,7 @@ body{
             margin-top: 20px;
             transition: 0.6s;
             &:hover{
-                color: rgb(8, 12, 133);
+                color: rgb(18, 133, 8);
             }
         }
     }
@@ -82,6 +91,10 @@ body{
     border-radius: 3px;
     transition: all 0.4s ease;
     align-items: right;
+    z-index: 1;
+    &:hover{
+        background-color: white;
+    }
 }
 
 /* when you click on burger, we want navbar to be visible and 
@@ -125,6 +138,9 @@ we need to move it back, because now its hidden x 100%  */
     .logo{
         display: block;
         text-align: left;
+    }
+    .burger div{
+        background-color: white;
     }
 }
 

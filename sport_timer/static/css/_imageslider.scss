@@ -1,59 +1,107 @@
-.timer{
-    position: absolute;
-    left: 1%;
-    top: 9%;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 4px solid $textcolor;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    // opacity: 0.6;
-    #timer_workout{
-        font-weight: 700;
-        font-size: 58px;
-        margin-bottom: -5px;
-        color:$textcolor;
-    }
-    p{
-        margin-top: -10px;
-        color:$textcolor;
+
+
+.pagetwo{
+    position: relative;
+    .timer_container{
+        position: absolute;
+        left: 2%;
+        top: 2%;
+        background-image: url(../images/timer_bg_blue.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        z-index: 1;
+
+        #timerNumber{
+            font-weight: 700;
+            font-size: 140px;
+            font-family: 'Revalia', cursive;
+        }
     }
 }
-#rest{
+
+#workout_status{
     position: absolute;
-    left: 1%;
-    top: 20%;
+    font-family: 'Revalia', cursive;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
     text-align: center;
-    font-size: 50px;
+    top: 20%;
+    font-size: 300px;
     text-transform: uppercase;
-    color:$textcolor;
+    color:rgba(220, 5, 2, 0.8);
     font-weight: bold;
 }
 .maindiv{
     max-width: 900px;
     margin: auto;
     height: auto;
+    z-index: -1;
+    position: relative;
+    background: url(../images/bg_image.png) no-repeat center center/cover;
     .exercise_photo{
         width: 100%;
         height: auto;
     }
 }
-#timer_div{
-    background-color: $bgcolor3;
-    z-index: 1;
+
+.player-box{
+    position: absolute;
+    bottom: 0;
+    left: 1%;
+    #playlist{
+        margin-left: 10px;
+        opacity: 0.1;
+        a{
+            color: rgb(179, 179, 179);
+            font-size: 12px;
+        }
+    }
 }
 
+audio{
+    opacity: 0;
+}
+
+#playlist .current-song a{
+    font-size: 12px;
+    color: white;
+}
+
+@media screen and (max-width:800px){
+    #workout_status{
+        font-size: 210px;
+        top: 25%;
+    }
+    .exercise_photo{
+        margin-top: 60px;
+    }
+}
+
+
 @media screen and (max-width:630px){
-    .maindiv{
-        margin: 40px auto 0 0;
+    #workout_status{
+        font-size: 180px;
+        top: 30%;
+    }
+    .exercise_photo{
+        margin-top: 75px;
     }
 }
 
 @media screen and (max-width:500px){
-    .maindiv{
-        margin: 60px auto 0 0;
+    #workout_status{
+        font-size: 150px;
+        top: 35%;
+    }
+    .exercise_photo{
+        margin-top: 90px;
+        margin-left: 0;
     }
 }
